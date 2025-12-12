@@ -1,0 +1,180 @@
+/* ===========================
+   FONDO GENERAL Y TEXTO
+   =========================== */
+
+html, body, [data-testid="stAppViewContainer"] {
+    /* Fondo degradado en la página */
+    background: radial-gradient(circle at top, #111827 0%, #020617 55%, #000000 100%) !important;
+    /* Color de texto claro para contraste */
+    color: #f5f5f5 !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* Tipo de letra */
+}
+
+/* Ocultar el header y footer de Streamlit por defecto */
+header, footer {
+    visibility: hidden;
+}
+
+/* ===========================
+   CONTENEDORES PRINCIPALES
+   =========================== */
+
+.app-shell {
+    max-width: 1200px; /* Ancho máximo de la app */
+    margin: 0 auto;    /* Centrar la app en la pantalla */
+    padding: 1.5rem 1rem 3rem 1rem;  /* Espaciado interno */
+    text-align: center;   /* Centrar el contenido */
+}
+
+/* Header verde con nombre de la app */
+.biodata-header {
+    background: #2E7D32;  /* Color verde */
+    padding: 1.2rem 2.5rem; /* Espaciado interno */
+    border-radius: 0 0 32px 32px; /* Bordes redondeados inferiores */
+    color: #ffffff; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    font-size: 2rem; /* Tamaño de fuente grande */
+    font-weight: 600;  /* Negrita */
+    letter-spacing: 0.03em; /* Espaciado entre letras */
+    box-shadow: 0 8px 18px rgba(0,0,0,0.5); /* Sombra suave */
+    margin-bottom: 2.5rem; /* Separación abajo */
+}
+
+/* Tarjeta principal donde se muestra el contenido */
+.main-card {
+    background: #020617;  /* Fondo oscuro */
+    padding: 2rem 2.5rem 2.5rem 2.5rem; /* Espaciado interno */
+    border-radius: 28px;   /* Bordes redondeados */
+    box-shadow: 0 18px 40px rgba(0,0,0,0.65);  /* Sombra profunda */
+    border: 1px solid #111827;  /* Borde oscuro */
+}
+
+/* ===========================
+   TITULOS Y TEXTOS
+   =========================== */
+
+/* Títulos de sección */
+.app-section-title {
+    font-size: 1.3rem;  /* Tamaño de letra de título */
+    font-weight: 600;  /* Negrita */
+    margin-top: 1.2rem; /* Separación superior */
+    margin-bottom: 0.4rem; /* Separación inferior */
+    color: #f9fafb;  /* Color de texto claro */
+}
+
+/* Textos de los párrafos debajo de los títulos */
+.app-section-text {
+    font-size: 0.95rem;  /* Tamaño de letra del texto */
+    color: #e5e7eb;  /* Color de texto claro */
+    margin-bottom: 0.7rem;  /* Separación inferior */
+}
+
+/* caption de columnas (SIB, GBIF, etc.) */
+.block-container .stCaption,
+.block-container .st-emotion-cache-1b2q5p0 {
+    color: #e5e7eb !important;  /* Texto claro en los captions */
+}
+
+/* ===========================
+   INPUTS DE TEXTO (buscador + columnas)
+   =========================== */
+
+/* Etiqueta del input */
+.stTextInput > label {
+    color: #e5e7eb !important;  /* Color claro para las etiquetas */
+}
+
+/* Contenedor del input (cuadro de texto) */
+.stTextInput > div {
+    border-radius: 14px !important;  /* Bordes redondeados */
+}
+
+/* Estilos para el cuadro de texto */
+.stTextInput > div > div {
+    border-radius: 14px !important;  /* Bordes redondeados */
+    border: 1px solid #374151 !important;  /* Borde gris oscuro */
+    background-color: #020617 !important;  /* Fondo oscuro */
+    box-shadow: none !important;  /* Sin sombra adicional */
+}
+
+/* Input dentro del contenedor */
+.stTextInput > div > div > input {
+    background-color: transparent !important; /* Fondo transparente */
+    border: none !important;  /* Sin borde */
+    border-radius: 14px !important;  /* Bordes redondeados */
+    padding: 0.45rem 0.9rem;  /* Relleno dentro del input */
+    color: #f9fafb !important;  /* Texto claro */
+}
+
+/* Placeholder (texto dentro del input cuando no hay valor) */
+.stTextInput > div > div > input::placeholder {
+    color: #9ca3af !important;  /* Color de texto gris para el placeholder */
+}
+
+/* Focus en el input (cuando está seleccionado) */
+.stTextInput > div > div:focus-within {
+    border-color: #22c55e !important;  /* Borde verde cuando está en foco */
+    box-shadow: 0 0 0 1px #22c55e55 !important;  /* Sombra verde */
+}
+
+/* ===========================
+   BOTONES
+   =========================== */
+
+/* Estilo del botón en general */
+.stButton > button {
+    background-color: #22c55e !important;  /* Fondo verde */
+    color: #020617 !important;  /* Texto oscuro */
+    border-radius: 14px !important;  /* Bordes redondeados */
+    border: none !important;  /* Sin borde */
+    padding: 0.6rem 1.6rem !important;  /* Relleno dentro del botón */
+    font-weight: 600 !important;  /* Negrita */
+    box-shadow: 0 10px 24px rgba(0,0,0,0.6) !important;  /* Sombra al hacer hover */
+}
+
+/* Efecto hover en el botón (cuando el mouse pasa sobre él) */
+.stButton > button:hover {
+    background-color: #16a34a !important;  /* Fondo más oscuro */
+    color: #020617 !important;  /* Texto oscuro */
+}
+
+/* ===========================
+   FILE UPLOADER
+   =========================== */
+
+/* Que todo el texto del uploader sea claro */
+[data-testid="stFileUploader"] * {
+    color: #e5e7eb !important;  /* Texto claro */
+}
+
+/* ===========================
+   TABLAS / DATAFRAMES
+   =========================== */
+
+/* Ocultamos los encabezados de las filas en las tablas */
+.dataframe tbody tr th {
+    display: none;
+}
+
+/* Encabezado de tabla */
+.dataframe thead tr th {
+    background-color: #064e3b;  /* Fondo verde oscuro */
+    color: #e5e7eb;  /* Texto claro */
+    font-weight: 600;  /* Negrita */
+}
+
+/* Filas de datos en las tablas */
+.dataframe tbody tr td {
+    color: #f9fafb;  /* Texto claro */
+    background-color: #020617;  /* Fondo oscuro */
+}
+
+/* ===========================
+   OTROS AJUSTES
+   =========================== */
+
+/* Quitar sombras raras de algunos contenedores automáticos de Streamlit */
+.st-emotion-cache-1kyxreq,
+.st-emotion-cache-1r4qj8v {
+    box-shadow: none !important;  /* Eliminar sombras innecesarias */
+}
